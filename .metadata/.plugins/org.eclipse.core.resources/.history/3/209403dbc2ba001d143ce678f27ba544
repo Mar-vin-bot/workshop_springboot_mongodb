@@ -1,0 +1,5 @@
+package com.marvinsilva.workshop.config;
+
+public class Instance {
+
+}
