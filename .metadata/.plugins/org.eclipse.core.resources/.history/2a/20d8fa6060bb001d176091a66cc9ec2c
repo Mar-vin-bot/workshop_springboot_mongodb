@@ -1,0 +1,5 @@
+package com.marvinsilva.workshop.services.exception;
+
+public class ObejectNotFoundException {
+
+}

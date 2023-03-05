@@ -1,0 +1,13 @@
+package com.marvinsilva.workshop.resources.exception;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
+@ControllerAdvice
+public class ResourceExceptionHandler  {
+
+	@ExceptionHandler()
+	public ResponseEntity<StandardError> objectNotFoundException
+
+}

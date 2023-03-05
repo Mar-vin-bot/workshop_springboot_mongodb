@@ -1,0 +1,11 @@
+package com.marvinsilva.workshop.resources.exception;
+
+public class StandardError {
+	
+    private Long timestamp;
+    private Integer status;
+    private String error;
+    private String menssage;
+    private String  path;
+
+}
