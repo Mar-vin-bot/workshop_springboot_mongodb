@@ -34,4 +34,8 @@ public class UserService {
 		return new User(objDTO.getId(), objDTO.getName(), objDTO.getEmail());
 	}
 	
+	public void delete(String id) {
+		findById(id);	//if id not exist return exception
+		repository.deleteById(id);
+	}
 }
