@@ -34,8 +34,8 @@ public class UserService {
 		return new User(objDTO.getId(), objDTO.getName(), objDTO.getEmail());
 	}
 	
-	public User update(User obj) {
-		User newObj = findById(obj.getId());
+	public User update(User obj) {	//obj inserido pelo user para update
+		User newObj = findById(obj.getId());	//procurando obj que será att
 		updateData(newObj, obj);
 		return repository.save(newObj);
 	}
