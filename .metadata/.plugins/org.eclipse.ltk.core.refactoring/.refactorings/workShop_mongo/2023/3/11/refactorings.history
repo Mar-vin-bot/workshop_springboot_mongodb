@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.marvinsilva.workshop.dto.AthorDTO.java&apos; to &apos;AuthorDTO.java&apos;&#x0A;- Original project: &apos;workShop_mongo&apos;&#x0A;- Original element: &apos;com.marvinsilva.workshop.dto.AthorDTO.java&apos;&#x0A;- Renamed element: &apos;com.marvinsilva.workshop.dto.AuthorDTO.java&apos;" description="Rename compilation unit &apos;AthorDTO.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.marvinsilva.workshop.dto{AthorDTO.java" name="AuthorDTO.java" references="false" stamp="1678647646741" version="1.0"/>
+</session>

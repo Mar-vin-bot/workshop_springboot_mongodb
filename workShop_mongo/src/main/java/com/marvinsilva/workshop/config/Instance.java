@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
+import com.marvinsilva.workshop.dto.AuthorDTO;
 import com.marvinsilva.workshop.entities.Post;
 import com.marvinsilva.workshop.entities.User;
 import com.marvinsilva.workshop.repository.PostRepository;
@@ -35,10 +36,12 @@ public class Instance implements CommandLineRunner{
 		User alex = new User(null, "Alex Green", "alex@gmail.com");
 		User bob = new User(null, "Bob Grey", "bob@gmail.com");
 		
-		Post post1 = new Post(null, sdf.parse("27/04/1991"), "Partiu viagem ", "Vou viajar para SP", bob);
-		Post post2 = new Post(null, sdf.parse("24/11/1987"), "Oasis ", "Wonderwall", maria);
-		
 		repository.saveAll(Arrays.asList(maria, alex, bob));
+		
+		Post post1 = new Post(null, sdf.parse("27/04/1991"), "Partiu viagem ", "Vou viajar para SP", new AuthorDTO(maria));
+		Post post2 = new Post(null, sdf.parse("24/11/1987"), "Oasis ", "Wonderwall", new AuthorDTO(maria));
+		
+		
 		postRepository.saveAll(Arrays.asList(post1, post2));
 		
 	}

@@ -1,0 +1,12 @@
+package com.marvinsilva.workshop.dto;
+
+public class AuthorDTO {
+	
+	private String id;
+	private String name;
+	
+	public AuthorDTO() {}
+	
+	public Aut
+
+}
