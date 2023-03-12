@@ -41,8 +41,10 @@ public class Instance implements CommandLineRunner{
 		Post post1 = new Post(null, sdf.parse("27/04/1991"), "Partiu viagem ", "Vou viajar para SP", new AuthorDTO(maria));
 		Post post2 = new Post(null, sdf.parse("24/11/1987"), "Oasis ", "Wonderwall", new AuthorDTO(maria));
 		
-		
 		postRepository.saveAll(Arrays.asList(post1, post2));
+		
+		maria.getPosts().addAll(Arrays.asList(post1, post2));
+		repository.save(maria);
 		
 	}
 
