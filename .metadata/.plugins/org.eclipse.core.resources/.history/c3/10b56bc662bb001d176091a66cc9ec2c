@@ -1,5 +1,0 @@
-package com.marvinsilva.workshop.resources.exception;
-
-public class ResourceExceptionHandler {
-
-}
