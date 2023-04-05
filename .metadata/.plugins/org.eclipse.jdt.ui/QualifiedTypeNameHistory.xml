@@ -21,9 +21,7 @@
     <fullyQualifiedTypeName name="com.marvinsilva.workshop.entities.User"/>
     <fullyQualifiedTypeName name="ch.qos.logback.core.encoder.ByteArrayUtil"/>
     <fullyQualifiedTypeName name="org.springframework.data.mongodb.core.mapping.DBRef"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
-    <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
     <fullyQualifiedTypeName name="com.marvinsilva.workshop.repository.PostRepository"/>
     <fullyQualifiedTypeName name="java.util.Optional"/>
     <fullyQualifiedTypeName name="com.marvinsilva.workshop.services.PostService"/>
@@ -33,4 +31,9 @@
     <fullyQualifiedTypeName name="com.marvinsilva.workshop.dto.CommentDTO"/>
     <fullyQualifiedTypeName name="com.marvinsilva.workshop.dto.AuthorDTO"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+    <fullyQualifiedTypeName name="java.net.URLDecoder"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+    <fullyQualifiedTypeName name="com.marvinsilva.workshop.resources.utils.URL"/>
+    <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
 </qualifiedTypeNameHistroy>
