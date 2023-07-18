@@ -30,6 +30,16 @@ public class PostService {
 		return repository.findByTitleContainingIgnoreCase(text);
 	}
 	*/
+
+	public List<Post> fullSearch(String text, Date minDate, Date maxDate){
+		//+1 dia no maxDate para find all day
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(maxDate);
+		calendar.add(Calendar.DAY_OF_MONTH, 1);
+		maxDate = calendar.getTime();
+
+		return repository.fullSearch(text, minDate, maxDate);
+	}
 	
 }
 	

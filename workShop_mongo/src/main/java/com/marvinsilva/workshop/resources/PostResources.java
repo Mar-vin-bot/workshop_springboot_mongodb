@@ -33,6 +33,19 @@ public class PostResources {
 		List<Post> list = service.findByTitle(text);
 		return ResponseEntity.ok().body(list);
 	}
+
+	@GetMapping
+	public ResponseEntity<List<Post>> fullSearch(
+		@RequestParam(value = "text", defaultValue="") String text,
+		@RequestParam(value = "minDate", defaultValue="") String text,
+		@RequestParam(value = "maxDate", defaultValue="") String text,
+	){
+		text = URL.decodeParm(text);
+		Date min = URL.convertDate(minDate, new Date(0L));
+		Date max = URL.convertDate(maxDate, new Date());
+		List <Post> list = service.fullSearch(text, minDate, maxDate)
+		ResponseEntity.ok.body(list)
+	}
 	
 
 }
