@@ -1,6 +1,6 @@
 package com.marvinsilva.workshop.services;
 
-import java.util.Calendar;
+
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public class PostService {
 	}
 	
 	public List<Post> findByTitle (String text){
-		return repository.newFindByTitle(text);
+		return repository.findByTitleContainingIgnoreCase(text);
 	}
 	
 	/*
@@ -33,13 +33,8 @@ public class PostService {
 	}
 	*/
 
-	public List<Post> fullSearch(String text, Date minDate, Date maxDate){
-		//+1 dia no maxDate para find all day
-		Calendar calendar = Calendar.getInstance();
-		calendar.setTime(maxDate);
-		calendar.add(Calendar.DAY_OF_MONTH, 1);
-		maxDate = calendar.getTime();
-
+	public List<Post> fullSearch(String text, Date minDate, Date maxDate) {
+		maxDate = new Date(maxDate.getTime() + 24 * 60 * 60 * 1000);
 		return repository.fullSearch(text, minDate, maxDate);
 	}
 	

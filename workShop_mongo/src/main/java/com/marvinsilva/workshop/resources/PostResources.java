@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,23 +29,22 @@ public class PostResources {
 		return ResponseEntity.ok().body(obj);
 	}
 	
-	@GetMapping("/titlesearch")
-	public ResponseEntity<List<Post>> findByTitle(@RequestParam(value="text", defaultValue ="") String text){
+	@RequestMapping(value="/titlesearch", method=RequestMethod.GET)
+ 	public ResponseEntity<List<Post>> findByTitle(@RequestParam(value="text", defaultValue="") String text) {
 		text = URL.decodeParm(text);
 		List<Post> list = service.findByTitle(text);
 		return ResponseEntity.ok().body(list);
 	}
 
-	@GetMapping
-	public ResponseEntity<List<Post>> fullSearch(
-		@RequestParam(value = "text", defaultValue="") String text,
-		@RequestParam(value = "minDate", defaultValue="") String minDate,
-		@RequestParam(value = "maxDate", defaultValue="") String maxDate
-	){
+	@RequestMapping(value="/fullsearch", method=RequestMethod.GET)
+ 	public ResponseEntity<List<Post>> fullSearch(
+ 			@RequestParam(value="text", defaultValue="") String text,
+ 			@RequestParam(value="minDate", defaultValue="") String minDate,
+ 			@RequestParam(value="maxDate", defaultValue="") String maxDate) {
 		text = URL.decodeParm(text);
 		Date min = URL.convertDate(minDate, new Date(0L));
 		Date max = URL.convertDate(maxDate, new Date());
-		List <Post> list = service.fullSearch(text, min, max);
+		List<Post> list = service.fullSearch(text, min, max);
 		return ResponseEntity.ok().body(list);
 	}
 	
